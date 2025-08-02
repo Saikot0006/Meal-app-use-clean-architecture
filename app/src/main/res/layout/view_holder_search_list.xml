@@ -4,9 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="meal"
+            type="com.example.mealapp.domain.model.Meal" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mealItemID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -24,6 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
                 android:scaleType="fitXY"
+                app:urlToImage="@{meal.image}"
                 android:src="@color/black"
                 tools:src="@drawable/loading" />
 
@@ -33,6 +38,7 @@
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@{meal.name}"
                 android:padding="8dp"
                 tools:text="Chicken" />
 

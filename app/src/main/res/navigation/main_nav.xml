@@ -7,7 +7,23 @@
 
     <fragment
         android:id="@+id/mealSearchFragment"
-        android:name="com.example.mealapp.MealSearchFragment"
+        android:name="com.example.mealapp.presentation.meal_search.MealSearchFragment"
         android:label="fragment_meal_search"
-        tools:layout="@layout/fragment_meal_search" />
+        tools:layout="@layout/fragment_meal_search" >
+        <action
+            android:id="@+id/action_mealSearchFragment_to_mealDetailsFragment"
+            app:destination="@id/mealDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealDetailsFragment"
+        android:name="com.example.mealapp.presentation.meal_details.MealDetailsFragment"
+        android:label="fragment_meal_details"
+        tools:layout="@layout/fragment_meal_details">
+
+        <argument
+            android:name="mealID"
+            app:argType="string"
+            app:nullable="true"/>
+    </fragment>
+
 </navigation>

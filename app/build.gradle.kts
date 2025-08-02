@@ -78,4 +78,5 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     // Lifecycles only (without ViewModel or LiveData)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.okhttp.profiler)
 }
